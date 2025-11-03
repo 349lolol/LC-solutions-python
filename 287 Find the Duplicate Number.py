@@ -12,3 +12,7 @@ class Solution:
             slow = nums[slow]
             slow2 = nums[slow2]
         return slow
+
+#floyds cycle detection: at first meeting, slow travels p + C - x, fast travels p + C + C - x
+#slow * 2 = fast, so we get p - x = 0, so p = x
+#this way, by running a slow2 to meet slow, they intersect as slow travels exactly 1 cycle in the loop
